@@ -1,10 +1,13 @@
 {
     "name": "cesium-template",
     "version": "0.0.1",
+    "homepage": "http://shaurya-pathak.github.io/cesium_flight_tracker-main",
     "description": "A simple Cesium template.",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "predeploy": "npm run start",
+        "deploy": "gh-pages -d start"
     },
     "dependencies": {
         "cesium": "^1.109.0",
@@ -18,5 +21,8 @@
         "cesium",
         "glitch",
         "express"
-    ]
+    ],
+    "devDependencies": {
+        "gh-pages": "^6.0.0"
+    }
 }
