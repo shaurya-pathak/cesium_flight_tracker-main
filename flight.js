@@ -70,7 +70,7 @@ async function updateViewer(flightData) {
         const airplaneUri = await Cesium.IonResource.fromAssetId(2295748);
     
         flightData.forEach(dataPoint => {
-            const position = Cesium.Cartesian3.fromDegrees(parseFloat(dataPoint.lon), parseFloat(dataPoint.lat), parseFloat(dataPoint.alt) || 0);
+            const position = Cesium.Cartesian3.fromDegrees(parseFloat(dataPoint.lon), parseFloat(dataPoint.lat), (parseFloat(dataPoint.alt) - 40) || 0);
             const heading = Cesium.Math.toRadians(parseFloat(dataPoint.trak - 90) || 0);  // Convert degrees to radians
             const pitch = 0;
             const roll = 0;
