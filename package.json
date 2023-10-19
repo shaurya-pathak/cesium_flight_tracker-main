@@ -5,9 +5,7 @@
     "description": "A simple Cesium template.",
     "main": "server.js",
     "scripts": {
-        "start": "node server.js",
-        "predeploy": "npm run start",
-        "deploy": "gh-pages -d start"
+        "start": "node server.js"
     },
     "dependencies": {
         "cesium": "^1.109.0",
